@@ -1,6 +1,6 @@
 # Geilitool
 
-TODO: Write a gem description
+Some method in ruby such as ancestors ignore the eigeinclass, but geilitool display the eigeinclass. I do it by extending the module of Kernel.
 
 ## Installation
 
@@ -18,7 +18,40 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+#### list all superclass and module included eigeinclass:
+    Kernel#geili_ancestors
+
+    irb(main):013:0> class A
+    irb(main):014:1> end
+    irb(main):019:0> a.geili_ancestors
+    => [#<Class:#<A:0x007fd094045328>>, A, Object, Kernel, BasicObject]
+
+    irb(main):021:0> A.geili_class
+    => [#<Class:A>, #<Class:Object>, #<Class:BasicObject>, Class]
+    irb(main):022:0> A.geili_ancestors
+    => [#<Class:A>, #<Class:Object>, #<Class:BasicObject>, Class, Module, Object, Kernel, BasicObject]
+
+#### find out the real class of object and don't hide the eigeinclass:
+    Kernel#geili_class 
+
+    irb(main):013:0> class A
+    irb(main):014:1> end
+    irb(main):020:0> a.geili_class
+    => [#<Class:#<A:0x007fd094045328>>, A]
+
+    irb(main):021:0> A.geili_class
+    => [#<Class:A>, #<Class:Object>, #<Class:BasicObject>, Class]
+
+#### find out which class defined the method:
+    Kernel#geili_defined? [method_name]
+
+    irb(main):013:0> class A
+    irb(main):014:1> def to_s;end
+    irb(main):015:1> end
+    => nil
+    irb(main):016:0> a.geili_defined? :to_s
+    => [A, Kernel]
+
 
 ## Contributing
 

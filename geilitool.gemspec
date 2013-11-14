@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["homeway.xue@gmail.com"]
   spec.description   = %q{A ruby library for advanced extention}
   spec.summary       = %q{There is some new features, such as full ancestors included eigeinclass}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/homeway/geilitool"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
