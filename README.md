@@ -23,11 +23,19 @@ Or install it yourself as:
 
     irb(main):013:0> class A
     irb(main):014:1> end
+<<<<<<< HEAD
     irb(main):015:0> a = A.new
 
     irb(main):019:0> a.geili_ancestors
     => [#<Class:#<A:0x007fd094045328>>, A, Object, Kernel, BasicObject]
 
+=======
+    irb(main):019:0> a.geili_ancestors
+    => [#<Class:#<A:0x007fd094045328>>, A, Object, Kernel, BasicObject]
+
+    irb(main):021:0> A.geili_class
+    => [#<Class:A>, #<Class:Object>, #<Class:BasicObject>, Class]
+>>>>>>> eff607765477a11a2ae4eb08b48ea0cdbf86d862
     irb(main):022:0> A.geili_ancestors
     => [#<Class:A>, #<Class:Object>, #<Class:BasicObject>, Class, Module, Object, Kernel, BasicObject]
 
@@ -36,8 +44,11 @@ Or install it yourself as:
 
     irb(main):013:0> class A
     irb(main):014:1> end
+<<<<<<< HEAD
     irb(main):015:0> a = A.new
 
+=======
+>>>>>>> eff607765477a11a2ae4eb08b48ea0cdbf86d862
     irb(main):020:0> a.geili_class
     => [#<Class:#<A:0x007fd094045328>>, A]
 
@@ -50,8 +61,12 @@ Or install it yourself as:
     irb(main):013:0> class A
     irb(main):014:1> def to_s;end
     irb(main):015:1> end
+<<<<<<< HEAD
     irb(main):016:0> a = A.new
 
+=======
+    => nil
+>>>>>>> eff607765477a11a2ae4eb08b48ea0cdbf86d862
     irb(main):016:0> a.geili_defined? :to_s
     => [A, Kernel]
 
