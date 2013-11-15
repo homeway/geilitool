@@ -19,7 +19,8 @@ Or install it yourself as:
 ## Usage
  
 #### list all superclass and module included eigeinclass:
-    Kernel#geili_ancestors
+
+Kernel#geili_ancestors
  
     irb(main):013:0> class A
     irb(main):014:1> end
@@ -32,7 +33,8 @@ Or install it yourself as:
     => [#<Class:A>, #<Class:Object>, #<Class:BasicObject>, Class, Module, Object, Kernel, BasicObject]
  
 #### find out the real class of object and don't hide the eigeinclass:
-    Kernel#geili_class 
+
+Kernel#geili_class 
  
     irb(main):013:0> class A
     irb(main):014:1> end
@@ -45,7 +47,8 @@ Or install it yourself as:
     => [#<Class:A>, #<Class:Object>, #<Class:BasicObject>, Class]
  
 #### find out which class defined the method:
-    Kernel#geili_defined? [method_name]
+
+Kernel#geili_defined? [method_name]
  
     irb(main):013:0> class A
     irb(main):014:1> def to_s;end
